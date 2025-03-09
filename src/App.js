@@ -6,7 +6,7 @@ function App() {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "auto",
       }}
     >
       <Provider store={store}>
