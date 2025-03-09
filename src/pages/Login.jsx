@@ -11,6 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { createUser } from "../features/yetkiSlice";
 import { useNavigate } from "react-router-dom";
+import avatar from "../assets/avatar.png";
 
 const Login = () => {
   let { email, password } = useSelector((state) => state.yetkiSlice);
@@ -36,7 +37,7 @@ const Login = () => {
       >
         <Avatar
           alt="avatar_img"
-          src="https://cdn.pixabay.com/photo/2017/03/21/02/00/user-2160923_960_720.png"
+          src={avatar}
           sx={{ width: 100, height: 100 }}
         />
         <Typography component="h1" variant="h5">
