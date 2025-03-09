@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getData = createAsyncThunk("haberSlice/getData", async () => {
-  const URL = process.env.REACT_APP_API_URL;
+  const URL =
+    "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=81a4163ea7eb4bccb489151972100adb";
 
   const res = await axios(URL);
   return res.data.articles;
