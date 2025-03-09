@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../features/haberSlice";
+import { deleteNews, getData } from "../features/haberSlice";
 import { useEffect } from "react";
 import loadingGif from "../assets/loading.gif";
 
@@ -19,7 +19,7 @@ const News = () => {
 
   useEffect(() => {
     dispatch(getData());
-  }, []);
+  }, [dispatch]);
 
   console.log(news);
   return (
@@ -84,6 +84,7 @@ const News = () => {
                     color: "#0D0D0D",
                     "&:hover": { color: "#F2884B", fontWeight: "bolder" },
                   }}
+                  onClick={() => dispatch(deleteNews(article.title))}
                 >
                   Clear
                 </Button>

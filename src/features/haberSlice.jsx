@@ -14,7 +14,11 @@ export const haberSlice = createSlice({
     news: [],
     loading: true,
   },
-  reducers: {},
+  reducers: {
+    deleteNews: (state, { payload }) => {
+      state.news = state.news.filter((a) => a.title !== payload);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getData.pending, (state) => {
@@ -27,4 +31,5 @@ export const haberSlice = createSlice({
   },
 });
 
+export const { deleteNews } = haberSlice.actions;
 export default haberSlice.reducer;
