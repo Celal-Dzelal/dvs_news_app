@@ -1,20 +1,19 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-// import News from "../pages/News";
-// import Login from "../pages/Login";
-// import Navbar from "../components/Navbar";
-// import PrivateRouter from "./PrivateRouter";
+import Navbar from "../components/Navbar";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import News from "../pages/News";
+import Login from "../pages/Login";
+
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      {/* <Navbar />
-
+      <Navbar />
       <Routes>
-        <Route path="/" element={<PrivateRouter/>}>
-          <Route path="" element={<News />} />
-        </Route>
+        <Route path="/" element={<News />} />
         <Route path="/login" element={<Login />} />
-      </Routes> */}
+      </Routes>
     </BrowserRouter>
   );
 };
