@@ -4,7 +4,11 @@ import { store } from "./app/store";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
       <Provider store={store}>
         <AppRouter />
       </Provider>
