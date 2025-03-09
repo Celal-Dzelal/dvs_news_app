@@ -8,7 +8,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { createUser } from "../features/yetkiSlice";
 import { useNavigate } from "react-router-dom";
 import avatar from "../assets/avatar.png";
@@ -54,7 +54,7 @@ const Login = () => {
             name="email"
             autoComplete="email"
             autoFocus
-            onChange={(e) => (setEmail = e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
             margin="normal"
@@ -64,7 +64,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
-            onChange={(e) => (setPassword = e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <Button
