@@ -1,29 +1,57 @@
-# Redux Toolkit Ornegi
+# DVS News
 
-## `Kurulum`
+- DVS News is a modern web application that allows users to follow the latest news. Users can log in with any email and password without creating an account and view news articles. Each article includes an image, title, and a short summary. Users can delete articles from their view or access more details.
+
+# 🌍 Live Demo
+
+[To Visit The Page]()
+
+## 🚀 Features
+
+**Login System:** Users can log in with any email and password without account creation.
+
+**News Cards:** The homepage displays 10 news articles.
+
+**Detail Page:** Clicking the "Detail" button redirects users to the original news source.
+
+**Delete Functionality:** Clicking the "Delete" button removes the article from the user's view.
+
+**Modern UI:** Uses MUI (Material-UI) for a sleek and user-friendly interface.
+
+**State Management:** Global state is managed using Redux Toolkit.
+
+## 🛠 Technologies Used
+
+**React -** For building the user interface
+
+**Redux Toolkit -** For state management
+
+**Axios -** For handling API requests
+
+**React Router DOM -** For navigation
+
+**MUI (Material-UI) -** For UI components
+
+### 📦 Installation & Setup
+
+**1. Clone the repository:**
 
 ```
-npm install veya yarn
+git clone https://github.com/Celal-Dzelal/dvs_news_app.git
 ```
 
-## `Kullanilan Kutuphaneler`
+**2. Install dependencies:**
 
-- `@reduxjs/toolkit`
-- `react-redux`
-- `axios`
-- `react-router-dom`
-- `@mui/material-ui`
-- `@emotion/react`
-- `@emotion/styled`
+```
+pnpm install
+```
 
-## `Kullanilacak API`:
+**3. Start the project:**
 
-- https://newsapi.org/
-  (Get Key butonuna tiklanarak key alinabilir)
+```
+pnpm start
+```
 
-- URL:
-  const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`;
+### 📜 License
 
-## `Kullanilacak Araclar`
-
-- `Redux Dev Tools` : Chrome uzerinde calisan ve global state uzerinde yapilan tum degisikliklerin takip edilmesini saglayan tarayici uzantisidir. Indirmek icin [tiklayiniz.](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?utm_source=chrome-ntp-icon)`
+- This project is licensed under the MIT License.
