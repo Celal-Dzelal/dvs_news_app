@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Avatar,
   Box,
@@ -14,8 +14,8 @@ import { useNavigate } from "react-router-dom";
 import avatar from "../assets/avatar.png";
 
 const Login = () => {
-  let { email, password } = useSelector((state) => state.yetkiSlice);
-
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -54,7 +54,7 @@ const Login = () => {
             name="email"
             autoComplete="email"
             autoFocus
-            onChange={(e) => (email = e.target.value)}
+            onChange={(e) => (setEmail = e.target.value)}
           />
           <TextField
             margin="normal"
@@ -64,7 +64,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
-            onChange={(e) => (password = e.target.value)}
+            onChange={(e) => (setPassword = e.target.value)}
           />
 
           <Button

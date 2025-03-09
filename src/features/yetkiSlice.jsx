@@ -2,15 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const yetkiSlice = createSlice({
   name: "yetkiSlice",
-  initialState: { email: "", password: "" },
+  initialState: { user: null },
   reducers: {
     createUser: (state, { payload }) => {
-      state.email = payload.email;
-      state.password = payload.password;
+      state.user = payload;
     },
     deleteUser: (state) => {
-      state.email = "";
-      state.password = "";
+      state.user = null;
     },
   },
 });

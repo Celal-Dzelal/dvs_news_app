@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { email } = useSelector((state) => state.yetkiSlice);
+  const user = useSelector((state) => state.yetkiSlice.user);
   const handleLogout = () => {
     dispatch(deleteUser());
     navigate("/login");
@@ -20,7 +20,7 @@ const Navbar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             DVS News
           </Typography>
-          {email ? (
+          {user ? (
             <Button color="inherit" onClick={handleLogout}>
               Logout
             </Button>
