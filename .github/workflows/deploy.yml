@@ -8,19 +8,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
+      - run: npm install
+      
+      - run: |
+          rm -rf build/
+          npm run build
+          find build/ -type l -delete  # Symlink'leri sil
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -35,5 +34,4 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
